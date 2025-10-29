@@ -1,16 +1,17 @@
-'''
-1.Vowels vs Consonants
-Write a program to input T strings (S) from user and print count of vowels and consonants in it.
-'''
 
-T=int(input("Enter number of strings: "))
-for i in range(T):
-    s=input()
-    vowels=0
-    consonants=0
-for i in range(len(s)):
-    if s[i] in 'aeiouAEIOU':
-            vowels+=1
-    else:
-            consonants+=1
-print(vowels, consonants)
+
+T = int(input("Enter number of strings: "))
+
+for _ in range(T):
+    s = input("Enter string: ")
+    vowels = 0
+    consonants = 0
+
+    for ch in s:
+        if ch.isalpha():  
+            if ch.lower() in 'aeiou':
+                vowels += 1
+            else:
+                consonants += 1
+
+    print("Vowels:", vowels, "Consonants:", consonants)
